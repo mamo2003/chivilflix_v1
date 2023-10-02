@@ -1,0 +1,39 @@
+main{background-color: rgb(54, 52, 52);}
+.header {padding-bottom: 55px;
+z-index: 1999;}
+.card{padding-top: 3px;
+}
+.volver{font-size: large;text-align: center;}
+.spacer{background-color: rgb(70, 68, 68);}
+.my-auto{color: #fff;}
+.card :hover{box-shadow:rgba(211, 212, 186, 0.876) 0px 8px 24px;}
+
+/*=========ace=============
+    404 page
+=======================*/
+
+.page_404{ padding:40px 0; background: #dededf;
+font-family: 'Arvo', serif;height: 37rem;
+}
+
+.page_404  img{ width:80%;}
+
+.four_zero_four_bg{
+
+
+.four_zero_four_bg h1{
+font-size:60px;
+}
+
+.four_zero_four_bg h3{
+font-size:80px;
+}
+.link_404{		 
+	color: #fff!important;
+    padding: 150px 5px;
+    background: #240a11;
+    margin: 20px 0;
+    display: inline-block;}
+	.contant_box_404{ margin-top:-20px;
+}
+}
