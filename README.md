@@ -23,8 +23,7 @@ GET  |/films/       |  categoria/   | :categoria  |  trae resultado por categori
 GET  |/films/       |  :actor       |             | trae resultado segun nombre parcial o  total de actores en el reparto.
 POST  |/films/cargar/|              |             | ingresar a traves de posmant // thunder , options: POST  ingresar la ruta , definir opcion JSON  -- RAW  y colocar en el body: {"id": n,"filmName":"Abcdef","filmImage":xxx,"categoria":"Asgdefcewa","genero":"Asgdefcewa","resumen":"Asgdefcewa","duracion":"Asgdefcewa","actores":"Asgdefcewa"}.luego presionar SEND. y el articulo sera creado en la base mongoDB.
 PUT | api/films/films|/cambiar/     |  :id         |ingresar el id  en la bara del navegador  seguido de la ruta  e ingresar a traves de posmant // thunder , options: PUT  ingresar la ruta , definir opcion JSON  -- RAW  y colocar en el body con el siguiente formato: {"id": n,"filmName":"Abcdef","filmImage":xxx,"categoria":"Asgdefcewa","genero":"Asgdefcewa","resumen":"Asgdefcewa","duracion":"Asgdefcewa","actores":"Asgdefcewa"}. los datos que se quieran actualizar . luego presionar SEND. y el articulo se actualizaran los datos ingresados en la base mongoDB.
-DELETE|api/films
-/films | /eliminar/|  :id           |             |ingresa el numero de Id  a continuacion de la ruta marcada en el navegador  de posmant // thunder , options: DELETE,  luego presiona "SEND".
+DELETE|api/films /eliminar/|  :id           |             |ingresa el numero de Id  a continuacion de la ruta marcada en el navegador  de posmant // thunder , options: DELETE,  luego presiona "SEND".
 
 ### LINKS NAVBAR
 
