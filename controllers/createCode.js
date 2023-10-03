@@ -1,9 +1,10 @@
 const sequelize = require("../src/conexion/connection");
 const filmoteca = require("../src/modelos/product");
-sequelize.authenticate();
-filmoteca.sync();
+
 
 async function createCode(req, res) {
+  await sequelize.authenticate();
+  await filmoteca.sync();
   try {
     const {
       poster,

@@ -8,7 +8,7 @@ const filmoteca = sequelize.define(
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoincremental: true,
-      allowNull: false,
+      allowNull: true,
     },
     poster: {
       type: DataTypes.STRING,
