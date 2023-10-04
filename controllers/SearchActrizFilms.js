@@ -9,7 +9,7 @@ async function SearchActrizFilms(req, res) {
       ? res
           .status(404)
           .render("pages/err")
-      : res.status(200).render('pages/films',{Allfilmoteca:Allfilmoteca});
+      : res.status(200).render('pages/actriz',{Allfilmoteca:Allfilmoteca});
   } catch (error) {
     res.status(500).render('pages/err');
   }

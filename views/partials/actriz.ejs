@@ -1,0 +1,12 @@
+<div class = "container">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <%  Allfilmoteca.forEach(e=>{ %>
+
+                            <div class="card">
+                                <div class="card-title"><%- e.idfilms %></div>
+                                <div class="card-body"><%- e.titulo %></div>
+                                <div class="card-text"><b>actriz:</b><%- e.actor %></div>
+                    </div>
+        <% }) %>
+    </div>
+</div>
