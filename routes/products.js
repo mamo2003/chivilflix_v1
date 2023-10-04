@@ -27,7 +27,7 @@ router.get('/buscar/:query', SearchFilm);
 
 router.get('/reparto/:query', SearchAct);
 
-router.get("/reparto/:query", SearchActrizFilms);
+router.get("/actrices/", SearchActrizFilms);
 
 router.post('/cargar/', createCode);
 
