@@ -10,6 +10,7 @@ const { SearchCat } = require('../controllers/SearchCat');
 const { SearchGenero } = require('../controllers/SearchGenero');
 const { SearchFilm } = require('../controllers/SearchFilm');
 const {SearchAct} = require('../controllers/SearchAct');
+const { SearchActrizFilms } = require('../controllers/SearchActrizFilms');
 const router = require('express').Router();
 
 router.get('/', HomePage);
@@ -25,6 +26,8 @@ router.get('/genero/:genero', SearchGenero);
 router.get('/buscar/:query', SearchFilm);
 
 router.get('/reparto/:query', SearchAct);
+
+router.get("/reparto/:query", SearchActrizFilms);
 
 router.post('/cargar/', createCode);
 
