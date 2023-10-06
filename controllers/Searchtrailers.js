@@ -1,9 +1,9 @@
 const sequelize = require('../src/conexion/connection');
-const trailersviews = require("../src/modelos/trailersviews");
+const trailersgeneroviews = require('../src/modelos/trailersgeneroviews');
 const { Op } = require('sequelize');
 async function Searchtrailers(req, res) {
   try {
-    const Allfilmoteca = await trailersviews.findAll();
+    const Allfilmoteca = await trailersgeneroviews.findAll();
     console.log(Allfilmoteca);
     Allfilmoteca <= 0
       ? res

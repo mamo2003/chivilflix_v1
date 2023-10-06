@@ -30,7 +30,7 @@ router.get('/reparto/:query', SearchAct);
 
 router.get("/actrices/", SearchActrizFilms);
 
-router.get("/actrices/", Searchtrailers);
+router.get("/trailers/", Searchtrailers);
 
 router.post('/cargar/', createCode);
 

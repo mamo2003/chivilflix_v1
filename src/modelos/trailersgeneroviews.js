@@ -2,7 +2,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../conexion/connection');
 
-const trailersviews = sequelize.define(
+const trailersgeneroviews = sequelize.define(
   "trailersgeneroviews",
   {
     idfilms: {
@@ -25,6 +25,6 @@ const trailersviews = sequelize.define(
   { tableName: "trailersgeneroviews", timestamps: false }
 );
 
-module.exports = trailersviews;
+module.exports = trailersgeneroviews;
 
 
