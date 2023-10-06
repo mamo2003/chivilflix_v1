@@ -1,12 +1,17 @@
 <div class = "container">
+    <div class="actriz">
     <div class="row row-cols-1 row-cols-md-4 g-4">
-        <%  Allfilmoteca.forEach(e=>{ %>
-
+<%  Allfilmoteca.sort ((A) =>{  %>
+                        <div class="col">
+                            <div class="actriz">
                             <div class="card">
-                                <div class="card-title"><%- e.idfilms %></div>
-                                <div class="card-body"><%- e.titulo %></div>
-                                <div class="card-text"><b>actriz:</b><%- e.actor %></div>
-                    </div>
+                                <div class="card-title"><b>ID:</b><%- A.idfilms %></div>
+                                <div class="card-body"><b>TITULO:</b><%- A.titulo %></div>
+                                <div class="card-text"><b>ACTRIZ:</b><%- A.actor %></div>
+                            </div>
+                            </div>
+                        </div>
         <% }) %>
+        </div>
     </div>
 </div>

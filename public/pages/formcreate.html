@@ -17,89 +17,72 @@
 <header class = "header">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">Chivilflix</a>
+            <a class="navbar-brand" id="chivilflix" href="/">Chivilflix</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/films" >total peliculas</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page"  href="/films/buscar/t" >x nombre</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page"  href="/films/id/4" >x id</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page"  href="/films/categoria/pelicula" >X Categoria</a></li>
-                        <li class="nav-item"><a  class="nav-link active" aria-current="page" href="/films/genero/aventura" >X genero</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page"  href="/films/reparto/scar" >X actor</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page"  href="/public/pages/formcreate.html" >cargar pelicula</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page"  href="/public/pages/formchange.html" >modificar pelicula</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page"  href="/public/pages/formdelete.html" >eliminar pelicula</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/films" >CATALOGO</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page"  href="/films/buscar/t" >FILM</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page"  href="/films/id/4" >ID FILM</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page"  href="/films/categoria/pelicula" >CATEGORIA</a></li>
+                        <li class="nav-item"><a  class="nav-link active" aria-current="page" href="/films/genero/aventura" >GENERO</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page"  href="/films/reparto/scar" >ACTORESyACTRICES</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page"  href="/films/trailers/" >TRAILERS</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page"  href="/films/actrices/" >FILMS ACTRICES</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page"  href="/public/pages/formcreate.html" >CARGA NEW FILM</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page"  href="/public/pages/formchange.html" >MODIFICAR FILM</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page"  href="/public/pages/formdelete.html" >ELIMINAR FILM</a></li>
                     </ul>
                     </div>
         </div>
     </nav>
 </header>
-<main class = "main">
-<form class="row g-3 needs-validation" novalidate method="post">
-  <div class="col-md-4">
-    <label for="validationCustom01" class="form-label">TITULO</label>
-    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+<main class = "main2">
+<form class="row g-2 needs-validation" id="formularios" validate method="post" page="/controllers/createCode.js">
+  <div class="row col-md-10">
+      <label for="validationCustom01" class="form-label">poster</label>
+      <input type="text" class="form-control" id="validationCustom01" placeholder= "/poster.jpg" required>
+      <div class="valid-feedback">
+      bien echo!
+    </div>
+    <label for="validationCustom02" class="form-label">titulo</label>
+    <input type="text" class="form-control" id="validationCustom02" placeholder= "nombre del film"  required>
     <div class="valid-feedback">
-      Looks good!
+      bien echo!
     </div>
-  </div>
-  <div class="col-md-4">
-    <label for="validationCustom02" class="form-label">POSTER</label>
-    <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+    <label for="validationCustom03" class="form-label">categorias</label>
+    <input type="text" class="form-control" id="validationCustom03" placeholder= "categoria"  required>
     <div class="valid-feedback">
-      Looks good!
+      bien hecho!
     </div>
-  </div>
-  <div class="col-md-4">
-    <label for="validationCustomUsername" class="form-label">TITULO</label>
-    <div class="input-group has-validation">
-      <span class="input-group-text" id="inputGroupPrepend">@</span>
-      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-      <div class="invalid-feedback">
-        Please choose a username.
-      </div>
+    <label for="validationCustom04" class="form-label">genero</label>
+    <input type="text" class="form-control" id="validationCustom04" placeholder= "genero" required>
+    <div class="valid-feedback">
+      bien hecho!
     </div>
-  </div>
-  <div class="col-md-6">
-    <label for="validationCustom03" class="form-label">CATEGORIA</label>
-    <input type="text" class="form-control" id="validationCustom03" required>
-    <div class="invalid-feedback">
-      Please provide a valid city.
+    <label for="validationCustom05" class="form-label">resumen</label>
+    <input type="text" class="form-control" id="validationCustom05" placeholder= "resumen: nombre de actores y actrices" required>
+    <div class="valid-feedback">
+      bien hecho!
     </div>
-  </div>
-  <div class="col-md-3">
-    <label for="validationCustom04" class="form-label">GENERO</label>
-    <select class="form-select" id="validationCustom04" required>
-      <option selected disabled value="">Choose...</option>
-      <option>...</option>
-    </select>
-    <div class="invalid-feedback">
-      Please select a valid state.
+    <label for="validationCustom06" class="form-label">temporadas</label>
+    <input type="text" class="form-control" id="validationCustom06" placeholder= "temporadas ej: 1,4,8,20" required>
+    <div class="valid-feedback">
+      bien hecho!
     </div>
-  </div>
-  <div class="col-md-3">
-    <label for="validationCustom05" class="form-label">Zip</label>
-    <input type="text" class="form-control" id="validationCustom05" required>
-    <div class="invalid-feedback">
-      Please provide a valid zip.
+    <label for="validationCustom07" class="form-label">reparto</label>
+    <input type="text" class="form-control" id="validationCustom07" placeholder= "reparto:nombre de actores y actrices" required>
+    <div class="valid-feedback">
+      bien hecho!
     </div>
-  </div>
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-      <label class="form-check-label" for="invalidCheck">
-        Agree to terms and conditions
-      </label>
-      <div class="invalid-feedback">
-        You must agree before submitting.
-      </div>
+    <label for="validationCustom08" class="form-label">trailer</label>
+    <input type="text" class="form-control" id="validationCustom08" placeholder= "trailer" required>
+    <div class="valid-feedback">
+      bien echo!
     </div>
-  </div>
-  <div class="col-12">
-    <button class="btn btn-primary" type="submit">Submit form</button>
+    <button id="botonsub" class="btn btn-primary" type="submit">crear film</button>
   </div>
 </form>
 <!-- // Example starter JavaScript for disabling form submissions if there are invalid fields

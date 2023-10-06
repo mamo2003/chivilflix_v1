@@ -1,4 +1,8 @@
 main{background-color: rgb(54, 52, 52);}
+.main2{background-color: rgb(54, 52, 52);height:800px;}
+#chivilflix{color:crimson; font-weight: 900;}
+#formularios{justify-content: center;}
+#botonsub{justify-items: center; margin-top: 10px; font-size: x-large;}
 .header {padding-bottom: 55px;
 z-index: 1999;}
 .card{padding-top: 3px;
@@ -7,7 +11,7 @@ z-index: 1999;}
 .spacer{background-color: rgb(70, 68, 68);}
 .my-auto{color: #fff;}
 .card :hover{box-shadow:rgba(211, 212, 186, 0.876) 0px 8px 24px;}
-
+.actriz{padding: 4px 4px;}
 /*=========ace=============
     404 page
 =======================*/
