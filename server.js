@@ -11,19 +11,12 @@ const { HomePage } = require('./controllers/HomePage');
 const { Op } = require('sequelize');
 
 dotenv.config();
-
-//carga las pages ejs
-app.set('views', path.join(__dirname, '/views'));
-//carga los 
-app.set('view engine', 'ejs');
+//midllewords format json
+app.use(express.json());
 //permite acceder a image 
 app.use(express.static(path.join(__dirname, 'public'))); 
 //da acceso a styles css
 app.use('/public', express.static('public'));
-//midllewords format json
-app.use(express.json());
-//usa el ruteo con /films
-app.use('/films', routes);
 // middleword  sincronizo servidor y  tabla BD
 app.use(async (req, res, next) => {
   try {
@@ -36,6 +29,13 @@ app.use(async (req, res, next) => {
       .json({ error: 'error en el servidor', description: error.mmessage });
   }
 });  
+//carga las pages ejs
+app.set('views', path.join(__dirname, '/views'));
+//carga los 
+app.set('view engine', 'ejs');;
+//usa el ruteo con /films
+app.use('/films', routes);
+
 
 app.get('/',HomePage);
 
