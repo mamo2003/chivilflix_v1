@@ -12,6 +12,10 @@ z-index: 1999;}
 .my-auto{color: #fff;}
 .card :hover{box-shadow:rgba(211, 212, 186, 0.876) 0px 8px 24px;}
 .actriz{padding: 4px 4px;}
+.construccion{justify-content:center;
+    color:gold;
+text-align: center;
+font-weight: 900;}
 /*=========ace=============
     404 page
 =======================*/

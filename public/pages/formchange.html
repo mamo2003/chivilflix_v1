@@ -40,89 +40,58 @@
     </nav>
 </header>
 <main class = "main2">
-    <form class="row g-3 needs-validation" novalidate method="post">
-  <div class="col-md-4">
-    <label for="validationCustom01" class="form-label">TITULO</label>
-    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+    <h1 class=" construccion">EN CONSTRUCCION</h1>
+  <h5 class=" construccion">Proximamente estara disponible esta opcion </h5>
+<form class="row g-2 needs-validation" id="formularios" validate method="post" page="/controllers/createCode.js">
+  <div class="row col-md-10">
+          <label for="validationCustom0" class="form-label">ID</label>
+      <input type="text" class="form-control" id="validationCustom0" placeholder= "ingresa el ID" required>
+      <div class="valid-feedback">
+      bien echo!
+    </div>
+      <label for="validationCustom01" class="form-label">poster</label>
+      <input type="text" class="form-control" id="validationCustom01" placeholder= "/poster.jpg" required>
+      <div class="valid-feedback">
+      bien echo!
+    </div>
+    <label for="validationCustom02" class="form-label">titulo</label>
+    <input type="text" class="form-control" id="validationCustom02" placeholder= "nombre del film"  required>
     <div class="valid-feedback">
-      Looks good!
+      bien echo!
     </div>
-  </div>
-  <div class="col-md-4">
-    <label for="validationCustom02" class="form-label">POSTER</label>
-    <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+    <label for="validationCustom03" class="form-label">categorias</label>
+    <input type="text" class="form-control" id="validationCustom03" placeholder= "categoria"  required>
     <div class="valid-feedback">
-      Looks good!
+      bien hecho!
     </div>
-  </div>
-  <div class="col-md-4">
-    <label for="validationCustomUsername" class="form-label">TITULO</label>
-    <div class="input-group has-validation">
-      <span class="input-group-text" id="inputGroupPrepend">@</span>
-      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-      <div class="invalid-feedback">
-        Please choose a username.
-      </div>
+    <label for="validationCustom04" class="form-label">genero</label>
+    <input type="text" class="form-control" id="validationCustom04" placeholder= "genero" required>
+    <div class="valid-feedback">
+      bien hecho!
     </div>
-  </div>
-  <div class="col-md-6">
-    <label for="validationCustom03" class="form-label">CATEGORIA</label>
-    <input type="text" class="form-control" id="validationCustom03" required>
-    <div class="invalid-feedback">
-      Please provide a valid city.
+    <label for="validationCustom05" class="form-label">resumen</label>
+    <input type="text" class="form-control" id="validationCustom05" placeholder= "resumen: nombre de actores y actrices" required>
+    <div class="valid-feedback">
+      bien hecho!
     </div>
-  </div>
-  <div class="col-md-3">
-    <label for="validationCustom04" class="form-label">GENERO</label>
-    <select class="form-select" id="validationCustom04" required>
-      <option selected disabled value="">Choose...</option>
-      <option>...</option>
-    </select>
-    <div class="invalid-feedback">
-      Please select a valid state.
+    <label for="validationCustom06" class="form-label">temporadas</label>
+    <input type="text" class="form-control" id="validationCustom06" placeholder= "temporadas ej: 1,4,8,20" required>
+    <div class="valid-feedback">
+      bien hecho!
     </div>
-  </div>
-  <div class="col-md-3">
-    <label for="validationCustom05" class="form-label">Zip</label>
-    <input type="text" class="form-control" id="validationCustom05" required>
-    <div class="invalid-feedback">
-      Please provide a valid zip.
+    <label for="validationCustom07" class="form-label">reparto</label>
+    <input type="text" class="form-control" id="validationCustom07" placeholder= "reparto:nombre de actores y actrices" required>
+    <div class="valid-feedback">
+      bien hecho!
     </div>
-  </div>
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-      <label class="form-check-label" for="invalidCheck">
-        Agree to terms and conditions
-      </label>
-      <div class="invalid-feedback">
-        You must agree before submitting.
-      </div>
+    <label for="validationCustom08" class="form-label">trailer</label>
+    <input type="text" class="form-control" id="validationCustom08" placeholder= "trailer" required>
+    <div class="valid-feedback">
+      bien echo!
     </div>
-  </div>
-  <div class="col-12">
-    <button class="btn btn-primary" type="submit">Submit form</button>
+    <button id="botonsub" class="btn btn-primary" type="submit">MODIFICAR</button>
   </div>
 </form>
-<!-- Example starter JavaScript for disabling form submissions if there are invalid fields
-(() => {
-  'use strict'
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
-      }
-
-      form.classList.add('was-validated')
-    }, false)
-  })
-})() -->
 </main>
 <footer >
 <div >
