@@ -1,4 +1,3 @@
-
 const {filmhome} = require('../controllers/filmhome')
 const { ErrorPage } = require('../controllers/ErrorPage');
 const { SearchId } = require('../controllers/SearchId');

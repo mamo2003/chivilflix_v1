@@ -10,6 +10,7 @@ const { ErrorPage } = require('./controllers/ErrorPage');
 const { HomePage } = require('./controllers/HomePage');
 const { Op } = require('sequelize');
 
+
 dotenv.config();
 //midllewords format json
 app.use(express.json());
@@ -43,9 +44,9 @@ app.get('*',ErrorPage);
 
 //escucha en el puerto
 app.listen(process.env.PORT || 3000, process.env.HOST, function () {
-    console.log(
+  console.log(
     `servidor escuchando en http:${process.env.HOST}:${process.env.PORT}`
-    );
+  );
 });
 
 
