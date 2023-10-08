@@ -1,12 +1,23 @@
 main{background-color: rgb(54, 52, 52);}
 .main2{background-color: rgb(54, 52, 52);height:800px;}
 #chivilflix{color:crimson; font-weight: 900;}
+.btnav{ background-color: rgb(54, 52, 52);;height:60px;
+    color:#fff;
+    border: #240a11;
+    border-radius: 20px;
+  transition-duration: 0.6s;
+}
+.btnav:hover {
+  background-color: rgb(148, 147, 147); 
+  color: rgb(17, 17, 17)!important;
+}
 #formularios{justify-content: center;}
 #botonsub{justify-items: center; margin-top: 10px; font-size: x-large;}
-.header {padding-bottom: 55px;
+.header {padding-bottom: 60px;
 z-index: 1999;}
-.card{padding-top: 3px;
-}
+.card{padding-top: 3px;}
+.imgcard{height:400px ;}
+.card-title{text-align: center;}
 .volver{font-size: large;text-align: center;}
 .spacer{background-color: rgb(70, 68, 68);}
 .my-auto{color: #fff;}

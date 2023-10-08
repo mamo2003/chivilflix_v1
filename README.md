@@ -18,11 +18,11 @@ Para acceder a la base de datos  se debe usar la siguiente URL:
 metodo|first header | second header | :parameters | detalle
 ------|-------------|---------------|-------------|----------
 GET  |/films /      |               |             | trae resultado  total de films en BD.
-GET  |/films/       |  id/          |  :id        | trae resultado segun el id  de la pelicula .
-GET  |/films/       |  categoria/   | :categoria  | trae resultado por categoria (peliculas/series) .
-GET  |/films/       |  genero/      | :genero     | trae resultado por generos (aventura, cficcion, drama, etc).
-GET  |/films/       |  reparto      | :query      | trae resultado segun nombre parcial o  total de actores en el reparto.
-GET  |/films/       |  buscar       | :query      | trae resultado segun nombre parcial o  total de nombre pelicula o serie.
+GET  |/films/       |  id/          |  :id        | trae resultado segun el id  de la pelicula(ingresarlo en barra navegador).
+GET  |/films/       |  categoria/   | :categoria  | trae resultado por categoria (ingresarlo en barra navegador: peliculas,series,etc) .
+GET  |/films/       |  genero/      | :genero     | trae resultado por generos (ingresarlo en barra navegador: aventura, cficcion, drama, etc).
+GET  |/films/       |  reparto      | :query      | trae resultado segun nombre parcial o  total de actores en el reparto (ingresarlo en barra navegador).
+GET  |/films/       |  buscar       | :query      | trae resultado segun nombre parcial o  total de nombre pelicula o serie (ingresarlo en barra navegador).
 GET  |/films/       |  actrices/    |             | trae resultado nombre de pelicula y actriz que que es parte del reparto.
 GET  |/films/       |  trailers/    |             | trae resultado nombre de pelicula , genero y trailers ordenados por films.
 POST  |/films/      |  cargar/      |             | ingresar a traves de posmant // thunder , options: POST  ingresar la ruta , definir opcion JSON  -- RAW  y colocar en el body: {"poster":"Abcdef","titulo":"abdgcers","categoria":"Asgdefcewa","genero":"Asgdefcewa","resumen":"Asgdefcewa","temporada":xx (o null),"reparto":"Asgdefcewa","trailers": "jcbsdkahiuw" (o null)}.luego presionar SEND. y el articulo sera creado en la base sql.
