@@ -13,9 +13,9 @@ main{background-color: rgb(54, 52, 52);}
 }
 #formularios{justify-content: center;}
 #botonsub{justify-items: center; margin-top: 10px; font-size: x-large;}
-.header {padding-bottom: 60px;
+.header {padding-bottom: 70px;
 z-index: 1999;}
-.card{padding-top: 3px;}
+.card{padding-top: 8px;}
 .imgcard{height:400px ;}
 .card-title{text-align: center;}
 .volver{font-size: large;text-align: center;}
