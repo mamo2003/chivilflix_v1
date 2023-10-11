@@ -4,7 +4,7 @@ const sequelize = require('../conexion/connection');
 const filmoteca = sequelize.define(
   'filmoteca',
   {
-    id: {
+    idfilms: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoincremental: true,

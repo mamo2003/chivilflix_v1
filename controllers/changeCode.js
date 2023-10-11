@@ -3,7 +3,7 @@ const filmoteca = require('../src/modelos/product');
 const { Op } = require('sequelize');
 async function changeCode(req, res) {
   try {
-    const { id } = req.params;
+    const { idfilms } = req.params;
     const {
       titulo,
       poster,
@@ -34,7 +34,7 @@ async function changeCode(req, res) {
           noname: ` no se encontrado films con ${filmsToUpdate}`,
         });
     }
-    const updatefilms = await filmoteca.findByPk(id);
+    const updatefilms = await filmoteca.findByPk(idfilms);
     res.status(200).json(updatefilms);
   } catch (error) {
     res.status(500).render('pages/err');

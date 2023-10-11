@@ -33,9 +33,9 @@ router.get("/trailers/", Searchtrailers);
 
 router.post('/cargar/', createCode);
 
-router.put('/cambiar/:id', changeCode);
+router.put('/cambiar/:idfilms', changeCode);
 
-router.delete('/eliminar/:id', DeleteCode);
+router.delete('/eliminar/:idfilms', DeleteCode);
 
 router.get('*', ErrorPage);
 
