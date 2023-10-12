@@ -65,9 +65,9 @@ DROP TABLE IF EXISTS `categorias`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `categorias` (
-  `idcategorias` int NOT NULL AUTO_INCREMENT,
+  `idcategoria` int NOT NULL AUTO_INCREMENT,
   `categoria` varchar(100) NOT NULL,
-  PRIMARY KEY (`idcategorias`)
+  PRIMARY KEY (`idcategoria`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -82,6 +82,54 @@ INSERT INTO `categorias` VALUES (1,'pelicula'),(2,'serie');
 UNLOCK TABLES;
 
 --
+-- Table structure for table `filmogenero`
+--
+
+DROP TABLE IF EXISTS `filmogenero`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `filmogenero` (
+  `idfilmogenero` int NOT NULL,
+  `genero` varchar(45) NOT NULL,
+  PRIMARY KEY (`idfilmogenero`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `filmogenero`
+--
+
+LOCK TABLES `filmogenero` WRITE;
+/*!40000 ALTER TABLE `filmogenero` DISABLE KEYS */;
+INSERT INTO `filmogenero` VALUES (1,'Drama, Hechos veridicos'),(2,'Drama, Misterio, Ficcion'),(3,'Ciencia Ficcion, Fantasia'),(4,'Ciencia Ficcion, Fantasia'),(5,'Drama, Ficcion, Sucesos'),(6,'Ficcion, Drama, Misterio'),(7,'Crimen, Suspenso, Drama'),(8,'Aventura, Ciencia Ficcion, Accion'),(9,'Aventura, Fantasia, Drama'),(10,'Ciencia Ficcion, Fantasia'),(11,'Comedia, Fantasia, Ficcion'),(12,'Comedia, Familia, Drama'),(13,'Drama, Familia, Western'),(14,'Drama, Ciencia Ficcion'),(15,'Drama, Hechos veridicos'),(16,'Western, Ciencia Ficción'),(17,'Ficcion, Drama, Tecnologia'),(18,'Accion, Drama, Suspenso'),(19,'Accion, Ficcion, Comedia'),(20,'Acción, Ciencia Ficción, Suspenso'),(21,'Comedia, Ficcion, Aventura'),(22,'Ciencia Ficcion, Suspenso'),(23,'Terror, Suspenso, Fantasia'),(24,'Acción, Aventura, Fantasía'),(25,'Drama, Historia, Aventura'),(26,'Drama, Suspenso, Intriga'),(27,'Acción, Ciencia Ficción, Terror'),(28,'Drama, Suspenso, Ficcion'),(29,'Drama, Accion, Aventura'),(30,'Drama, Ciencia Ficcion, Aventura'),(31,'Drama, Ciencia Ficcion, Suspenso'),(32,'Suspenso, Aventura, Ficcion'),(33,'Drama, Terror, Ficcion'),(34,'Drama, Hechos veridicos'),(35,'Accion, Fantasia, Ciencia Ficcion'),(36,'aventura'),(39,'aventura'),(40,'aventura');
+/*!40000 ALTER TABLE `filmogenero` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `filmoreparto`
+--
+
+DROP TABLE IF EXISTS `filmoreparto`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `filmoreparto` (
+  `idfilmoreparto` int NOT NULL,
+  `reparto` varchar(600) NOT NULL,
+  PRIMARY KEY (`idfilmoreparto`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `filmoreparto`
+--
+
+LOCK TABLES `filmoreparto` WRITE;
+/*!40000 ALTER TABLE `filmoreparto` DISABLE KEYS */;
+INSERT INTO `filmoreparto` VALUES (1,'Claire Fox, Olivia Colman, Matt Smith, Tobias Menzies, Vanesa Kirby, Helena Bonham Carter'),(2,'Lili Reinhart, Casey Cott, Camila Mendes, Marisol Nichols, Madelaine Petsch, Mädchen Amick'),(3,'Pedro Pascal, Carl Weathers, Misty Rosas, Chris Bartlett, Rio Hackford, Giancarlo Esposito'),(4,'Tom Hopper, David Castañeda, Emmy Raver-Lampman, Robert Sheehan, Aidan Gallagher, Elliot Page'),(5,'Anya Taylor-Joy, Thomas Brodie-Sangster, Harry Melling, Moses Ingram, Chloe Pirrie, Janina Elkin'),(6,'Millie Bobby Brown, Henry Cavill, Sam Claflin, Helena Bonham Carter, Louis Partridge, Adeel Akhtar'),(7,'Joaquin Phoenix, Robert De Niro, Zazie Beetz, Frances Conroy, Brett Cullen, Shea Whigham'),(8,'Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth, Scarlett Johansson, Jeremy Renner'),(9,'Emilia Clarke, Lena Headey, Sophie Turner, Kit Harington, Peter Dinklage, Nikolaj Coster-Waldau'),(10,'Grant Gustin, Carlos Valdes, Danielle Panabaker, Candice Patton, Jesse L. Martin, Tom Cavanagh'),(11,'Jim Parsons, Johnny Galecki, Kaley Cuoco, Simon Helberg, Kunal Nayyar, Melissa Rauch, Mayim Bialik'),(12,'Jennifer Aniston, Courteney Cox, Lisa Kudrow, David Schwimmer, Matthew Perry, Matt LeBlanc'),(13,'Amybeth McNulty, Geraldine James, R. H. Thomson, Corrine Koslo, Dalila Bela, Lucas Jade Zumann'),(14,'Gillian Anderson, David Duchovny, Mitch Pileggi, Robert Patrick, Tom Braidwood, Bruce Harwood'),(15,'Jared Harris, Stellan Skarsgård, Emily Watson, Paul Ritter, Jessie Buckley, Adam Nagaitis'),(16,'Evan Rachel Wood, Thandie Newton, Jeffrey Wright, Tessa Thompson, Ed Harris, Luke Hemsworth'),(17,'Lee Pace, Scoot McNairy, Mackenzie Davis, Kerry Bishé, Toby Huss, Alana Cavanaugh'),(18,'Jessica Chastain, John Malkovich, Colin Farrell, Common, Geena Davis, Ioan Gruffudd'),(19,'Margot Robbie, Ewan McGregor, Mary Elizabeth Winstead, Jurnee Smollett, Rosie Perez, Chris Messina'),(20,'Stacy Martin, Rhona Mitra, Theo James, Peter Ferdinando, Lia Williams, Toby Jones'),(21,'Dwayne Johnson, Kevin Hart, Jack Black, Karen Gillan, Awkwafina, Nick Jonas'),(22,'Miranda Cosgrove, Kate Walsh, Omar Epps, Angus Macfadyen, Jorja Fox, Enver Gjokaj'),(23,'Bill Skarsgård, Jessica Chastain, Bill Hader, James McAvoy, Isaiah Mustafa, Jay Ryan'),(24,'Chadwick Boseman, Michael B. Jordan, Lupita Nyong\'o, Danai Gurira, Martin Freeman, Daniel Kaluuya'),(25,'Christian Bale, Matt Damon, Caitriona Balfe, Josh Lucas, Noah Jupe, Jon Bernthal'),(26,'Génesis Rodríguez, Vincent Piazza, Benjamin Sokolow, Emily Bayiokos'),(27,'Amy Manson, Luke Allen-Gale, Nina Bergman, Dominic Mafham, James Weber Brown, Lorina Kamburova'),(28,'Marion Cotillard, Matt Damon, Laurence Fishburne, Jude Law, Kate Winslet, Jennifer Ehle, Gwyneth Paltrow'),(29,'Scarlett Johansson, Florence Pugh, David Harbour, O.T. Fagbenle, Rachel Weisz, William Hurt, Ray Winstone'),(30,'Matt Damon, Jessica Chastain, Kristen Wiig, Jeff Daniels, Michael Peña, Sean Bean, Kate Mara'),(31,'Alicia Vikander, Domhnall Gleeson, Oscar Isaac, Sonoya Mizuno, Corey Johnson, Claire Selby, Gana Bayarsaikhan'),(32,'Bryce Dallas Howard, Chris Pratt, Irrfan Khan, Vincent D\'Onofrio, Omar Sy, Nick Robinson, Judy Greer'),(33,'Will Smith, Alice Braga, Charlie Tahan, Dash Mihok, Salli Richardson-Whitfield, Willow Smith, Emma Thompson'),(34,'Ryan Gosling, Claire Foy, Jason Clarke, Kyle Chandler, Corey Stoll, Patrick Fugit'),(35,'John Boyega, Scott Eastwood, Cailee Spaeny, Jing Tian, Rinko Kikuchi, Burn Gorman'),(36,'jvkcslvcjrihnvnv'),(39,'cladkjlasfjcoruncouj'),(40,'jvkcslvcjribgfbfbhnvnv');
+/*!40000 ALTER TABLE `filmoreparto` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `filmoteca`
 --
 
@@ -89,7 +137,7 @@ DROP TABLE IF EXISTS `filmoteca`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `filmoteca` (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `idfilms` int NOT NULL AUTO_INCREMENT,
   `poster` varchar(100) NOT NULL,
   `titulo` varchar(120) NOT NULL,
   `categoria` varchar(45) NOT NULL,
@@ -98,7 +146,7 @@ CREATE TABLE `filmoteca` (
   `temporada` int DEFAULT NULL,
   `reparto` varchar(500) NOT NULL,
   `trailers` varchar(150) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`idfilms`)
 ) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -111,6 +159,26 @@ LOCK TABLES `filmoteca` WRITE;
 INSERT INTO `filmoteca` VALUES (1,'\"/image/1.jpg\"','The Crown','Serie','Drama, Hechos veridicos','Este drama narra las rivalidades políticas y el romance de la reina Isabel II, así como los sucesos que moldearon la segunda mitad del siglo XX.',4,'Claire Fox, Olivia Colman, Matt Smith, Tobias Menzies, Vanesa Kirby, Helena Bonham Carter',NULL),(2,'\"/image/2.jpg\"','Riverdale','Serie','Drama, Misterio, Ficcion','El paso a la edad adulta incluye sexo, romance, escuela y familia. Para Archie y sus amigos, también hay misterios oscuros.',5,'Lili Reinhart, Casey Cott, Camila Mendes, Marisol Nichols, Madelaine Petsch, Mädchen Amick',NULL),(3,'\"/image/3.jpg\"','The Mandalorian','Serie','Ciencia Ficcion, Fantasia','Ambientada tras la caída del Imperio y antes de la aparición de la Primera Orden, la serie sigue los pasos de un pistolero solitario en las aventuras que protagoniza en los confines de la galaxia, donde no alcanza la autoridad de la Nueva República.',2,'Pedro Pascal, Carl Weathers, Misty Rosas, Chris Bartlett, Rio Hackford, Giancarlo Esposito','https://www.youtube.com/embed/aOC8E8z_ifw'),(4,'\"/image/4.jpg\"','The Umbrella Academy','Serie','Ciencia Ficcion, Fantasia','La muerte de su padre reúne a unos hermanos distanciados y con extraordinarios poderes que descubren impactantes secretos y una amenaza que se cierne sobre la humanidad.',1,'Tom Hopper, David Castañeda, Emmy Raver-Lampman, Robert Sheehan, Aidan Gallagher, Elliot Page',NULL),(5,'\"/image/5.jpg\"','Gambito de Dama','Serie','Drama, Ficcion, Sucesos','En los cincuenta, una joven de un orfanato descubre que tiene un increíble don para el ajedrez y recorre el arduo camino a la fama mientras lucha contra las adicciones.',1,'Anya Taylor-Joy, Thomas Brodie-Sangster, Harry Melling, Moses Ingram, Chloe Pirrie, Janina Elkin',NULL),(6,'\"/image/6.jpg\"','Enola Holmes','Pelicula','Ficcion, Drama, Misterio','La hermana menor de Sherlock, descubre que su madre ha desaparecido y se dispone a encontrarla. En su búsqueda, saca a relucir el sabueso que corre por sus venas y se encuentra con una conspiración que gira en torno a un misterioso lord, demostrando que su ilustre hermano no es el único talento en la familia.',NULL,'Millie Bobby Brown, Henry Cavill, Sam Claflin, Helena Bonham Carter, Louis Partridge, Adeel Akhtar',NULL),(7,'\"/image/7.jpg\"','Guason','Pelicula','Crimen, Suspenso, Drama','Arthur Fleck (Phoenix) es un hombre ignorado por la sociedad, cuya motivación en la vida es hacer reír. Pero una serie de trágicos acontecimientos le llevarán a ver el mundo de otra forma. Película basada en el popular personaje de DC Comics Joker, conocido como archivillano de Batman, pero que en este film tomará un cariz más realista y oscuro.',NULL,'Joaquin Phoenix, Robert De Niro, Zazie Beetz, Frances Conroy, Brett Cullen, Shea Whigham','https://www.youtube.com/embed/zAGVQLHvwOY'),(8,'\"/image/8.jpg\"','Avengers: End Game','Pelicula','Aventura, Ciencia Ficcion, Accion','Después de los devastadores eventos de los Vengadores: Infinity War (2018), el universo está en ruinas. Con la ayuda de los aliados restantes, los Vengadores se reúnen una vez más para revertir las acciones de Thanos y restaurar el equilibrio del universo.',NULL,'Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth, Scarlett Johansson, Jeremy Renner',NULL),(9,'\"/image/9.jpg\"','Juego de tronos','Serie','Aventura, Fantasia, Drama','En un mundo fantástico y en un contexto medieval varias familias, relativas a la nobleza, se disputan el poder para dominar el territorio ficticio de Poniente (Westeros) y tomar el control de los Siete Reinos desde el Trono de Hierro, lugar donde el rey ejerce el poder.',8,'Emilia Clarke, Lena Headey, Sophie Turner, Kit Harington, Peter Dinklage, Nikolaj Coster-Waldau',NULL),(10,'\"/image/10.jpg\"','The Flash','Serie','Ciencia Ficcion, Fantasia','Sigue las veloces aventuras de Barry Allen, un joven común y corriente con el deseo latente de ayudar a los demás. Cuando una inesperada partícula aceleradora golpea por accidente a Barry, de pronto se encuentra cargado de un increíble poder para moverse a increíbles velocidades. Mientras Barry siempre ha tenido el alma de un héroe, sus nuevos poderes le han dado la capacidad de actuar como tal.',6,'Grant Gustin, Carlos Valdes, Danielle Panabaker, Candice Patton, Jesse L. Martin, Tom Cavanagh',NULL),(11,'\"/image/11.jpg\"','The Big Bang Theory','Serie','Comedia, Fantasia, Ficcion','Leonard y Sheldon son dos físicos que comparten trabajo y apartamento. La serie comienza con la mudanza de Penny, su nueva y atractiva vecina, y hace hincapié en la dificultad de los físicos para relacionarse con personas fuera de su entorno para dar lugar a situaciones cómicas.',12,'Jim Parsons, Johnny Galecki, Kaley Cuoco, Simon Helberg, Kunal Nayyar, Melissa Rauch, Mayim Bialik','https://www.youtube.com/embed/WBb3fojgW0Q'),(12,'\"/image/12.jpg\"','Friends','Serie','Comedia, Familia, Drama','\'Friends\' narra las aventuras y desventuras de seis jóvenes de Nueva York: Rachel, Monica, Phoebe, Ross, Chandler y Joey. Ellos forman una unida pandilla de amigos que viven en Manhattan y que suelen reunirse en sus apartamentos o en su bar habitual cafetería, el Central Perk. A pesar de los numerosos cambios que se producen en sus vidas, su amistad es inquebrantable en la dura batalla por salir adelante en sus periplos profesionales y personales.',10,'Jennifer Aniston, Courteney Cox, Lisa Kudrow, David Schwimmer, Matthew Perry, Matt LeBlanc',NULL),(13,'\"/image/13.jpg\"','Anne with an \'E\'','Serie','Drama, Familia, Western','Anne Shirley es una niña huérfana que vive en un pequeño pueblo llamado Avonlea que pertenece a la Isla del Príncipe Eduardo, en el año 1890. Después de una infancia difícil, donde fue pasando de orfanato a hogares de acogida, es enviada por error a vivir con una solterona y su hermano. Cuando cumple 13 años, Anne va a conseguir transformar su vida y el pequeño pueblo donde vive gracias a su fuerte personalidad, intelecto e imaginación. Basada en la inolvidable novela.',2,'Amybeth McNulty, Geraldine James, R. H. Thomson, Corrine Koslo, Dalila Bela, Lucas Jade Zumann',NULL),(14,'\"/image/14.jpg\"','Expedientes Secretos \'X\'','Serie','Drama, Ciencia Ficcion','Fox Mulder y Dana Scully son dos investigadores del FBI que investigan casos sin resolución ni explicación, ya sea por razones paranormales (espíritus, criaturas extrañas, aliens...) ya porque el gobierno se ha encargado de ocultar todo tipo de pruebas. Cuando Mulder tenía doce años, su hermana pequeña fue secuestrada por unos desconocidos, aunque él cree que, en realidad, fue abducida por extraterrestres. Tras acabar sus estudios en la universidad de Oxford, ingresó en la Academia de Quantico, donde se ganó el apodo de \'siniestro\'',11,'Gillian Anderson, David Duchovny, Mitch Pileggi, Robert Patrick, Tom Braidwood, Bruce Harwood','https://www.youtube.com/embed/KKziOmsJxzE'),(15,'\"/image/15.jpg\"','Chernobyl','Serie','Drama, Hechos veridicos','Sigue «la verdadera historia de una de las peores catástrofes provocadas por el hombre y habla de los valientes hombres y mujeres que se sacrificaron para salvar a Europa de un desastre inimaginable. La miniserie se centra en el desgarrador alcance del desastre de la planta nuclear que ocurrió en Ucrania en abril de 1986, revelando cómo y por qué ocurrió, además contando las sorprendentes y notables historias de los héroes que lucharon y cayeron.',1,'Jared Harris, Stellan Skarsgård, Emily Watson, Paul Ritter, Jessie Buckley, Adam Nagaitis','https://www.youtube.com/embed/s9APLXM9Ei8'),(16,'\"/image/16.jpg\"','Westworld','Serie','Western, Ciencia Ficción','\'Westworld\' es una oscura odisea acerca del amanecer de la conciencia artificial y la evolución del pecado. Situada en la intersección del futuro cercano y el pasado reimaginado, explora un mundo donde cada apetito humano, sin importar cuán noble o depravado, puede ser saciado. Está ambientada en un parque temático futurista dirigido por el Dr. Robert Ford (Anthony Hopkins). Las instalaciones cuentan con androides caracterizados del western americano, y gracias a ellos los visitantes pueden introducirse en cualquier tipo de fantasía por muy oscura que sea.',3,'Evan Rachel Wood, Thandie Newton, Jeffrey Wright, Tessa Thompson, Ed Harris, Luke Hemsworth','https://www.youtube.com/embed/qLFBcdd6Qw0'),(17,'\"/image/17.jpg\"','Halt and Catch Fire','Serie','Ficcion, Drama, Tecnologia','Situada en los inicios de la década de 1980, un visionario ficticio, un ingeniero electrónico y una prodigiosa ingeniera, se alían a una programadora de software para confrontar con las corporaciones informáticas dominantes de la época. El Personal de la firma y sus socios de negocio, comenzarán una carrera que cambiará la cultura en el Estado de Texas, cuna de las empresas de tecnología, casi de la misma forma que lo es hoy Silicon Valey. \n Esta historia ficticia emula el trabajo realizado, en su momento, por la firma Compaq, cuando clonó el BIOS de las Computadoras Personales IBM, dando vida así al económico mercado de los clones. Mostrando también, a lo largo de sus 4 temporadas, el nacimiento de la arquitectura abierta de hardware, los videojuegos online, las salas de chat y de trueque de productos físicos, los BBS, y las primeras nubes computacionales, hasta la llegada de Internet (sin dejar afuera la guerra de los web browsers).',4,'Lee Pace, Scoot McNairy, Mackenzie Davis, Kerry Bishé, Toby Huss, Alana Cavanaugh','https://www.youtube.com/embed/pWrioRji60A'),(18,'\"/image/18.jpg\"','Ava','Pelicula','Accion, Drama, Suspenso','Ava es una mortífera asesina a sueldo que trabaja para una organización de operaciones encubiertas, que viaja por todo el mundo acabando con aquellos objetivos que nadie más puede derribar. Cuando uno de sus encargos sale mal, Ava tendrá que luchar por una vida.',NULL,'Jessica Chastain, John Malkovich, Colin Farrell, Common, Geena Davis, Ioan Gruffudd',NULL),(19,'\"/image/19.jpg\"','Aves de presa y la fantabulosa emancipación de una Harley Quinn','Pelicula','Accion, Ficcion, Comedia','Después de separarse de Joker, Harley Quinn y otras tres heroínas (Canario Negro, Cazadora y Renée Montoya) unen sus fuerzas para salvar a una niña (Cassandra Cain) del malvado rey del crimen Máscara Negra.',NULL,'Margot Robbie, Ewan McGregor, Mary Elizabeth Winstead, Jurnee Smollett, Rosie Perez, Chris Messina',NULL),(20,'\"/image/20.jpg\"','Archivo','Pelicula','Acción, Ciencia Ficción, Suspenso','2038: George Almore está trabajando en una verdadera IA equivalente a la humana. Su último prototipo está casi listo. Esta fase sensible también es la más arriesgada. Especialmente porque tiene un objetivo que debe ocultarse a toda costa: reunirse con su esposa muerta.',NULL,'Stacy Martin, Rhona Mitra, Theo James, Peter Ferdinando, Lia Williams, Toby Jones','https://www.youtube.com/embed/VHSoCnDioAo'),(21,'\"/image/21.jpg\"','Jumanji - The next level','Pelicula','Comedia, Ficcion, Aventura','Las aventuras continúan en el fantástico mundo del video juego Jumanji, donde nada es lo que parece. En esta ocasión, los jugadores vuelven al juego, pero sus personajes se han intercambiado entre sí, lo que ofrece un curioso plantel: los mismos héroes con distinta apariencia y habilidades. Pero, ¿dónde está el resto de la gente?',NULL,'Dwayne Johnson, Kevin Hart, Jack Black, Karen Gillan, Awkwafina, Nick Jonas','https://www.youtube.com/embed/rBxcF-r9Ibs'),(22,'\"/image/22.jpg\"','3022','Pelicula','Ciencia Ficcion, Suspenso','La película está ambientada en una estación espacial en el futuro. La tripulación sufre un estrés traumático y considera abandonar su misión después de observar lo que creen que es la destrucción de la Tierra. La película se muestra como una serie de flashbacks y flash-forward.',NULL,'Miranda Cosgrove, Kate Walsh, Omar Epps, Angus Macfadyen, Jorja Fox, Enver Gjokaj','https://www.youtube.com/embed/AGQ7OkmIx4Q'),(23,'\"/image/23.jpg\"','IT - Capitulo 2','Pelicula','Terror, Suspenso, Fantasia','En este segundo capitulo Han pasado 27 años desde que el \'Club de los Perdedores\', formado por Bill, Berverly, Richie, Ben, Eddie, Mike y Stanley, se enfrentaran al macabro y despiadado Pennywise (Bill Skarsgård). En cuanto tuvieron oportunidad, abandonaron el pueblo de Derry, en el estado de Maine, que tantos problemas les había ocasionado. Sin embargo, ahora, siendo adultos, parece que no pueden escapar de su pasado. Todos deberán enfrentarse de nuevo al temible payaso para descubrir si de verdad están preparados para superar sus traumas de la infancia.',NULL,'Bill Skarsgård, Jessica Chastain, Bill Hader, James McAvoy, Isaiah Mustafa, Jay Ryan','https://www.youtube.com/embed/hZeFeYSmBcg'),(24,'\"/image/24.jpg\"','Pantera Negra','Pelicula','Acción, Aventura, Fantasía','T’Challa (Chadwick Boseman) regresa a su hogar en la apartada nación africana de Wakanda para servir como líder de su país. Tras suceder a su padre en el trono, pasa a convertirse en Pantera Negra, una sigilosa criatura de la noche, con agudos sentidos felinos y otras habilidades como súper fuerza e inteligencia, agilidad, estrategia o maestro del combate sin armas. Es bajo el liderazgo de T’Challa como Wakanda consigue convertirse en una de las naciones más ricas y tecnológicamente avanzadas del planeta.',NULL,'Chadwick Boseman, Michael B. Jordan, Lupita Nyong\'o, Danai Gurira, Martin Freeman, Daniel Kaluuya','https://www.youtube.com/embed/BE6inv8Xh4A'),(25,'\"/image/25.jpg\"','Contra lo imposible (Ford versus Ferrari)','Pelicula','Drama, Historia, Aventura','Los ganadores del Premio de la Academia® Matt Damon y Christian Bale protagonizan CONTRA LO IMPOSIBLE, basada en la historia real del visionario diseñador americano de automóviles Carroll Shelby (Damon) y el intrépido piloto británico Ken Miles (Bale). Juntos construyen un nuevo coche de carreras para Ford Motor Company y así enfrentar a Enzo Ferrari en las 24 Horas de Le Mans en Francia en 1966.',NULL,'Christian Bale, Matt Damon, Caitriona Balfe, Josh Lucas, Noah Jupe, Jon Bernthal','https://www.youtube.com/embed/SOVb0-2g1Q0'),(26,'\"/image/26.jpg\"','Centigrados','Pelicula','Drama, Suspenso, Intriga','Una joven pareja estadounidense viaja a las montañas árticas de Noruega. Después de detenerse durante una tormenta de nieve, se despiertan atrapados en su SUV, enterrados bajo capas de nieve y hielo.',NULL,'Génesis Rodríguez, Vincent Piazza, Benjamin Sokolow, Emily Bayiokos',NULL),(27,'\"/image/27.jpg\"','DOOM: Aniquilacion','Pelicula','Acción, Ciencia Ficción, Terror','Doom: Aniquilación sigue a un grupo de marines espaciales que han respondido a una llamada de alerta de una base en la luna marciana, solo para descubrir que ha sido tomada por criaturas demoníacas que amenazan con desatar el infierno en la tierra.',NULL,'Amy Manson, Luke Allen-Gale, Nina Bergman, Dominic Mafham, James Weber Brown, Lorina Kamburova','https://www.youtube.com/embed/nat3u3gAVLE'),(28,'\"/image/28.jpg\"','Contagio','Pelicula','Drama, Suspenso, Ficcion','De repente, sin saber cuál es su origen, aunque todo hace sospechar que comienza con el viaje de una norteamericana a un casino de Hong Kong, un virus mortal comienza a propagarse por todo el mundo. En pocos días, la enfermedad empieza a diezmar a la población. El contagio se produce por mero contacto entre los seres humanos. Un thriller realista y sin efectos especiales sobre los efectos de una epidemia.',NULL,'Marion Cotillard, Matt Damon, Laurence Fishburne, Jude Law, Kate Winslet, Jennifer Ehle, Gwyneth Paltrow','https://www.youtube.com/embed/4sYSyuuLk5g'),(29,'\"/image/29.jpg\"','Viuda Negra','Pelicula','Drama, Accion, Aventura','Primera pelicula individual de la Viuda Negra en el universo cinematografico de Marvel, contando su historia desde que se inició como doble agente rusa, su niñez, sus misiones, y su actualidad, después de Avengers.',NULL,'Scarlett Johansson, Florence Pugh, David Harbour, O.T. Fagbenle, Rachel Weisz, William Hurt, Ray Winstone','https://www.youtube.com/embed/BIn8iANwEog'),(30,'\"/image/30.jpg\"','The Martian','Pelicula','Drama, Ciencia Ficcion, Aventura','Durante una misión a Marte de la nave tripulada Ares III, una fuerte tormenta se desata dando por desaparecido y muerto al astronauta Mark Watney (Matt Damon), sus compañeros toman la decisión de irse pero él ha sobrevivido. Está solo y sin apenas recursos en el planeta. Con muy pocos medios deberá recurrir a sus conocimientos, su sentido del humor y un gran instinto de supervivencia para lograr sobrevivir y comunicar a la Tierra que todavía está vivo esperando que acudan en su rescate.',NULL,'Matt Damon, Jessica Chastain, Kristen Wiig, Jeff Daniels, Michael Peña, Sean Bean, Kate Mara','https://www.youtube.com/embed/XvB58bCVfng'),(31,'\"/image/31.jpg\"','Ex-Machina','Pelicula','Drama, Ciencia Ficcion, Suspenso','Un programador multimillonario selecciona a Caleb, un joven empleado de su empresa, para que pase una semana en un lugar remoto con el objetivo de que participe en un test en el que estará involucrada su última creación: un robot-mujer en el que inteligencia artificial lo es todo.',NULL,'Alicia Vikander, Domhnall Gleeson, Oscar Isaac, Sonoya Mizuno, Corey Johnson, Claire Selby, Gana Bayarsaikhan','https://www.youtube.com/embed/XRYL5spvEcI'),(32,'\"/image/32.jpg\"','Jurassic World','Pelicula','Suspenso, Aventura, Ficcion','Veintidós años después de lo ocurrido en Jurassic Park, la isla Nublar ha sido transformada en un enorme parque temático, Jurassic Wold, con versiones «domesticadas» de algunos de los dinosaurios más conocidos. Cuando todo parece ir sobre ruedas y ser el negocio del siglo, un nuevo dinosaurio de especie desconocida, pues ha sido creado manipulando genéticamente su ADN, y que resulta ser mucho más inteligente de lo que se pensaba, se escapa de su recinto y comienza a causar estragos entre los visitantes del Parque.',NULL,'Bryce Dallas Howard, Chris Pratt, Irrfan Khan, Vincent D\'Onofrio, Omar Sy, Nick Robinson, Judy Greer',NULL),(33,'\"/image/33.jpg\"','Soy leyenda','Pelicula','Drama, Terror, Ficcion','Años después de que una plaga mate a la mayoría de la humanidad y transforme al resto en monstruos, el único superviviente en la ciudad de Nueva York lucha valientemente para encontrar una cura.',NULL,'Will Smith, Alice Braga, Charlie Tahan, Dash Mihok, Salli Richardson-Whitfield, Willow Smith, Emma Thompson','https://www.youtube.com/embed/dtKMEAXyPkg'),(34,'\"/image/34.jpg\"','El primer hombre en la luna','Pelicula','Drama, Hechos veridicos','Cuenta la historia de la misión de la NASA que llevó al primer hombre a la luna, centrada en Neil Armstrong (interpretado por Ryan Gosling) y el periodo comprendido entre los años 1961 y 1969. Un relato en primera persona, basado en la novela de James R. Hansen, que explora el sacrificio y el precio que representó, tanto para Armstrong como para Estados Unidos, una de las misiones más peligrosas de la historia.',NULL,'Ryan Gosling, Claire Foy, Jason Clarke, Kyle Chandler, Corey Stoll, Patrick Fugit',''),(35,'\"/image/35.jpg\"','Titanes del pacifico - La insurreccion','Pelicula','Accion, Fantasia, Ciencia Ficcion','Han pasado 10 años tras la primera invasión que sufrió la humanidad, pero la lucha aún no ha terminado. El planeta vuelve a ser asediado por los Kaiju, una raza de alienígenas colosales, que emergen desde un portal interdimensional con el objetivo de destruir a la raza humana. Ante esta nueva amenaza, los Jaegers, robots gigantes de guerra pilotados por dos personas para sobrellevar la inmensa carga neuronal que conlleva manipularlos, ya no están a la altura de lo que se les viene encima. Será entonces cuando los supervivientes de la primera invasión, además de nuevos personajes como el hijo de Pentecost, tendrán que idear la manera de sorprender al enorme enemigo, apostando por nuevas estrategias defensivas y de ataque. Con la Tierra en ruinas e intentando reconstruirse, esta nueva batalla puede ser decisiva para el futuro.',NULL,'John Boyega, Scott Eastwood, Cailee Spaeny, Jing Tian, Rinko Kikuchi, Burn Gorman',NULL),(36,'que paaasaaa que ','no entraaaaaaaaaaaaaaaaaa','pelicula','aventura','dsclkjhsdkfhuiowreuhcvieucvi',20,'jvkcslvcjrihnvnv','132fdewsafdes'),(39,'este debe ser el oposter 39 ','39 ahora','serie','aventura','dkjfhdsfaggs',4,'cladkjlasfjcoruncouj','lckdvsdfgwrtthgwncw'),(40,'49 ','49 debe ser','pelicula','aventura','dsclkjhsdkfhuiowreuhcvidghfdghbeucvi',2,'jvkcslvcjribgfbfbhnvnv','dkfvchjsouveousrbdgfbfgbvueojsv');
 /*!40000 ALTER TABLE `filmoteca` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Temporary view structure for view `filmotecaview`
+--
+
+DROP TABLE IF EXISTS `filmotecaview`;
+/*!50001 DROP VIEW IF EXISTS `filmotecaview`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `filmotecaview` AS SELECT 
+ 1 AS `idfilms`,
+ 1 AS `poster`,
+ 1 AS `titulo`,
+ 1 AS `categoria`,
+ 1 AS `genero`,
+ 1 AS `resumen`,
+ 1 AS `temporada`,
+ 1 AS `reparto`,
+ 1 AS `trailers`*/;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Table structure for table `films`
@@ -329,14 +397,6 @@ SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = @saved_cs_client;
 
 --
--- Dumping events for database 'trailerflix'
---
-
---
--- Dumping routines for database 'trailerflix'
---
-
---
 -- Final view structure for view `actrizfilmsviews`
 --
 
@@ -350,6 +410,24 @@ SET character_set_client = @saved_cs_client;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `actrizfilmsviews` AS select `g`.`idfilms` AS `idfilms`,`f`.`titulo` AS `titulo`,`r`.`idactor` AS `idactor`,`a`.`actor` AS `actor` from (((`generalfilms` `g` join `reparto` `r` on((`g`.`idreparto` = `r`.`idreparto`))) join `films` `f` on((`g`.`idfilms` = `f`.`idfilms`))) join `actor` `a` on((`r`.`idactor` = `a`.`idactor`))) where (`a`.`genero` = 'actriz') */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `filmotecaview`
+--
+
+/*!50001 DROP VIEW IF EXISTS `filmotecaview`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `filmotecaview` AS select `g`.`idfilms` AS `idfilms`,`f`.`poster` AS `poster`,`f`.`titulo` AS `titulo`,`c`.`categoria` AS `categoria`,`e`.`genero` AS `genero`,`r`.`resumen` AS `resumen`,`t`.`temporada` AS `temporada`,`a`.`reparto` AS `reparto`,`s`.`trailers` AS `trailers` from (((((((`generalfilms` `g` join `films` `f` on((`g`.`idfilms` = `f`.`idfilms`))) join `categorias` `c` on((`g`.`idcategoria` = `c`.`idcategoria`))) join `filmogenero` `e` on((`g`.`idgenero` = `e`.`idfilmogenero`))) join `resumenes` `r` on((`g`.`idresumen` = `r`.`Idresumen`))) join `temporada` `t` on((`g`.`idtemporada` = `t`.`idtemporada`))) join `filmoreparto` `a` on((`g`.`idreparto` = `a`.`idfilmoreparto`))) join `trailers` `s` on((`g`.`idtrailers` = `s`.`idtrailers`))) order by `g`.`idfilms` desc */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -381,4 +459,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-08 11:02:53
+-- Dump completed on 2023-10-11 21:56:47
