@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `trailerflix` /*!40100 DEFAULT CHARACTER SET utf8mb3 */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `trailerflix`;
 -- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
 --
 -- Host: localhost    Database: trailerflix
@@ -230,7 +228,7 @@ CREATE TABLE `generalfilms` (
 
 LOCK TABLES `generalfilms` WRITE;
 /*!40000 ALTER TABLE `generalfilms` DISABLE KEYS */;
-INSERT INTO `generalfilms` VALUES (1,2,1,1,2,1,1),(2,2,2,2,1,2,2),(3,2,3,3,1,3,3),(4,2,4,4,5,4,4),(5,2,5,5,4,5,5),(6,1,6,6,NULL,6,6),(7,1,7,7,NULL,7,7),(8,1,8,8,NULL,8,8),(9,2,9,9,8,9,9),(10,2,10,10,6,10,10),(11,2,11,11,12,11,11),(12,2,12,12,10,12,12),(13,2,13,13,2,13,13),(14,2,14,14,11,14,14),(15,2,15,15,1,15,15),(16,2,16,16,3,16,16),(17,2,17,17,4,17,17),(18,1,18,18,NULL,18,18),(19,1,19,19,NULL,19,19),(20,1,20,20,NULL,20,20),(21,1,21,21,NULL,21,21),(22,1,22,22,NULL,22,22),(23,1,23,23,NULL,23,23),(24,1,24,24,NULL,24,24),(25,1,25,25,NULL,25,25),(26,1,26,26,NULL,26,26),(27,1,27,27,NULL,27,27),(28,1,28,28,NULL,28,28),(29,1,29,29,NULL,29,29),(30,1,30,30,NULL,30,30),(31,1,31,31,NULL,31,31),(32,1,32,32,NULL,32,32),(33,1,33,33,NULL,33,33),(34,1,34,34,NULL,34,34),(35,1,35,35,NULL,35,35);
+INSERT INTO `generalfilms` VALUES (1,2,1,1,2,1,0),(2,2,2,2,1,2,0),(3,2,3,3,1,3,1),(4,2,4,4,5,4,0),(5,2,5,5,4,5,0),(6,1,6,6,0,6,0),(7,1,7,7,0,7,2),(8,1,8,8,0,8,0),(9,2,9,9,8,9,0),(10,2,10,10,6,10,0),(11,2,11,11,12,11,3),(12,2,12,12,10,12,0),(13,2,13,13,2,13,0),(14,2,14,14,11,14,4),(15,2,15,15,1,15,5),(16,2,16,16,3,16,6),(17,2,17,17,4,17,7),(18,1,18,18,0,18,0),(19,1,19,19,0,19,0),(20,1,20,20,0,20,8),(21,1,21,21,0,21,9),(22,1,22,22,0,22,10),(23,1,23,23,0,23,11),(24,1,24,24,0,24,12),(25,1,25,25,0,25,13),(26,1,26,26,0,26,0),(27,1,27,27,0,27,14),(28,1,28,28,0,28,15),(29,1,29,29,0,29,16),(30,1,30,30,0,30,17),(31,1,31,31,0,31,18),(32,1,32,32,0,32,0),(33,1,33,33,0,33,19),(34,1,34,34,0,34,0),(35,1,35,35,0,35,0);
 /*!40000 ALTER TABLE `generalfilms` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -341,7 +339,7 @@ DROP TABLE IF EXISTS `temporada`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `temporada` (
   `idtemporada` int NOT NULL,
-  `temporada` varchar(45) NOT NULL,
+  `temporada` int NOT NULL DEFAULT '0',
   PRIMARY KEY (`idtemporada`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -352,7 +350,7 @@ CREATE TABLE `temporada` (
 
 LOCK TABLES `temporada` WRITE;
 /*!40000 ALTER TABLE `temporada` DISABLE KEYS */;
-INSERT INTO `temporada` VALUES (1,'1'),(2,'2'),(3,'3'),(4,'4'),(5,'5'),(6,'6'),(7,'7'),(8,'8'),(9,'9'),(10,'10'),(11,'11'),(12,'12');
+INSERT INTO `temporada` VALUES (0,0),(1,1),(2,2),(3,3),(4,4),(5,5),(6,6),(7,7),(8,8),(9,9),(10,10),(11,11),(12,12);
 /*!40000 ALTER TABLE `temporada` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -364,7 +362,7 @@ DROP TABLE IF EXISTS `trailers`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `trailers` (
-  `idtrailers` int NOT NULL,
+  `idtrailers` int NOT NULL DEFAULT '0',
   `trailers` varchar(100) NOT NULL,
   PRIMARY KEY (`idtrailers`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
@@ -376,7 +374,7 @@ CREATE TABLE `trailers` (
 
 LOCK TABLES `trailers` WRITE;
 /*!40000 ALTER TABLE `trailers` DISABLE KEYS */;
-INSERT INTO `trailers` VALUES (1,'https://www.youtube.com/embed/aOC8E8z_ifw'),(2,'https://www.youtube.com/embed/zAGVQLHvwOY'),(3,'https://www.youtube.com/embed/WBb3fojgW0Q'),(4,'https://www.youtube.com/embed/KKziOmsJxzE'),(5,'https://www.youtube.com/embed/s9APLXM9Ei8'),(6,'https://www.youtube.com/embed/qLFBcdd6Qw0'),(7,'https://www.youtube.com/embed/pWrioRji60A'),(8,'https://www.youtube.com/embed/VHSoCnDioAo'),(9,'https://www.youtube.com/embed/rBxcF-r9Ibs'),(10,'https://www.youtube.com/embed/AGQ7OkmIx4Q'),(11,'https://www.youtube.com/embed/hZeFeYSmBcg'),(12,'https://www.youtube.com/embed/BE6inv8Xh4A'),(13,'https://www.youtube.com/embed/SOVb0-2g1Q0'),(14,'https://www.youtube.com/embed/nat3u3gAVLE'),(15,'https://www.youtube.com/embed/4sYSyuuLk5g'),(16,'https://www.youtube.com/embed/BIn8iANwEog'),(17,'https://www.youtube.com/embed/XvB58bCVfng'),(18,'https://www.youtube.com/embed/XRYL5spvEcI'),(19,'https://www.youtube.com/embed/dtKMEAXyPkg');
+INSERT INTO `trailers` VALUES (0,''),(1,'https://www.youtube.com/embed/aOC8E8z_ifw'),(2,'https://www.youtube.com/embed/zAGVQLHvwOY'),(3,'https://www.youtube.com/embed/WBb3fojgW0Q'),(4,'https://www.youtube.com/embed/KKziOmsJxzE'),(5,'https://www.youtube.com/embed/s9APLXM9Ei8'),(6,'https://www.youtube.com/embed/qLFBcdd6Qw0'),(7,'https://www.youtube.com/embed/pWrioRji60A'),(8,'https://www.youtube.com/embed/VHSoCnDioAo'),(9,'https://www.youtube.com/embed/rBxcF-r9Ibs'),(10,'https://www.youtube.com/embed/AGQ7OkmIx4Q'),(11,'https://www.youtube.com/embed/hZeFeYSmBcg'),(12,'https://www.youtube.com/embed/BE6inv8Xh4A'),(13,'https://www.youtube.com/embed/SOVb0-2g1Q0'),(14,'https://www.youtube.com/embed/nat3u3gAVLE'),(15,'https://www.youtube.com/embed/4sYSyuuLk5g'),(16,'https://www.youtube.com/embed/BIn8iANwEog'),(17,'https://www.youtube.com/embed/XvB58bCVfng'),(18,'https://www.youtube.com/embed/XRYL5spvEcI'),(19,'https://www.youtube.com/embed/dtKMEAXyPkg');
 /*!40000 ALTER TABLE `trailers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -459,4 +457,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-11 21:56:47
+-- Dump completed on 2023-10-12 13:11:26

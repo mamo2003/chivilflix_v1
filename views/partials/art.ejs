@@ -4,14 +4,15 @@
                         <div class="col">
                             <div class="card" >
                                 <image class="imgcard" src= <%- A.poster %> >
-                                <div class="card-body"></div>
                                 <div class="card-title"><b><%- A.titulo%></b></div>
                                 <div class="card-text"><b>categoria:</b><%- A.categoria %></div>
                                 <div class="card-text"><b>genero:</b><%- A.genero %></div>
                                 <div class="overflow-auto"><b>resumen:</b><%- A.resumen %></div>
-                                <div class="card-text"><b>temporadas:</b><%- A.temporada %></div>
-                                <div class="card-text"><b>reparto:</b><%- A.reparto %></div>
-                                <div class="card-text"><b>trailer:</b><%- A.trailers %> </div>
+                                <% if(A.temporada > 0){ %>
+                                <div class="card-text"><b>temporadas:</b><%- A.temporada  %></div>
+                                <% } %>
+                                <div class="overflow-auto"><b>reparto:</b><%- A.reparto %></div>
+                                <div class="card-text"><b>trailer:</b><a href= "<%- A.trailers %> " >LINK</a></div>
                             </div>
                     </div>
         <% }) %>
