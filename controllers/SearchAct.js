@@ -5,7 +5,7 @@ const { Op } = require('sequelize');
 async function SearchAct(req, res) {
   try {
     const { query } = req.params;
-    const Allfilmoteca = await filmoteca.findAll({
+    const Allfilmoteca = await filmotecaview.findAll({
       where: { reparto: { [Op.like]: `%${query}%` } },
     });
     Allfilmoteca <= 0
