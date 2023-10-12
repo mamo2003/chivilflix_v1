@@ -4,15 +4,15 @@ const filmotecaview = require("../src/modelos/filmotecaview");
 const { Op } = require('sequelize');
 async function SearchId (req, res) {
   try {
-    const {id} = req.params;
+    const {idfilm} = req.params;
 
-    const Allfilmoteca = await filmotecaview.findByPk(id);
+    const Allfilmoteca = await filmotecaview.findByPk(idfilm);
     console.log(Allfilmoteca);
     Allfilmoteca <= 0
       ? res
           .status(404)
           .render('pages/err3', {
-            noname: ` no se encontrado films con ${Allfilmoteca}`,
+            noname: ` no se encontrado films con ${idfilm}`,
           })
       : res.status(200).render('pages/pk', { Allfilmoteca: Allfilmoteca });
   } catch (error) {

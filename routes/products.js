@@ -17,7 +17,7 @@ router.get('/', HomePage);
 
 router.get('/film', filmhome);
 
-router.get('/id/:id', SearchId);
+router.get('/id/:idfilm', SearchId);
 
 router.get('/categoria/:categoria', SearchCat);
 

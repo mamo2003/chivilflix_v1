@@ -1,11 +1,11 @@
 const sequelize = require('../src/conexion/connection');
 const filmoteca = require('../src/modelos/product');
-const filmotecaview = require("../src/modelos/filmotecaview");
+const filmotecaview = require('../src/modelos/filmotecaview');
 const { Op } = require('sequelize');
 async function SearchGenero(req, res) {
   try {
     const { genero } = req.params;
-    const Allfilmoteca = await filmoteca.findAll({
+    const Allfilmoteca = await filmotecaview.findAll({
       where: { genero: { [Op.substring]: `%${genero}%` } },
     });
     !Allfilmoteca 

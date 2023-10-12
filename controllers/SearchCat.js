@@ -12,7 +12,7 @@ async function SearchCat(req, res) {
       ? res
           .status(404)
           .render("pages/err3", {
-            noname: ` no se encontrado films con ${Allfilmoteca}`,
+            noname: ` no se encontrado films con ${categoria}`,
           })
       : res.status(200).render("pages/film", { Allfilmoteca: Allfilmoteca });
   } catch (error) {
