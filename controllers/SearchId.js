@@ -1,11 +1,12 @@
 const sequelize = require('../src/conexion/connection');
 const filmoteca = require('../src/modelos/product');
+const filmotecaview = require("../src/modelos/filmotecaview");
 const { Op } = require('sequelize');
 async function SearchId (req, res) {
   try {
     const {id} = req.params;
 
-    const Allfilmoteca = await filmoteca.findByPk(id);
+    const Allfilmoteca = await filmotecaview.findByPk(id);
     console.log(Allfilmoteca);
     Allfilmoteca <= 0
       ? res

@@ -1,5 +1,6 @@
 const sequelize = require('../src/conexion/connection');
 const filmoteca = require('../src/modelos/product');
+const filmotecaview = require("../src/modelos/filmotecaview");
 const { Op } = require('sequelize');
 async function SearchAct(req, res) {
   try {

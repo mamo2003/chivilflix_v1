@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const path = require('path');
 const sequelize = require('./src/conexion/connection');
 const filmoteca = require('./src/modelos/product');
+const filmotecaview = require("./src/modelos/filmotecaview");
 const ejs = require('ejs');
 const app = express();
 const { ErrorPage } = require('./controllers/ErrorPage');
@@ -22,7 +23,7 @@ app.use('/public', express.static('public'));
 app.use(async (req, res, next) => {
   try {
     await sequelize.authenticate();
-    await filmoteca.sync();
+    await filmotecaview.sync();
     next();
   } catch (error) {
     res

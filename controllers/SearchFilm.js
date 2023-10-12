@@ -1,10 +1,11 @@
 const sequelize = require('../src/conexion/connection');
 const filmoteca = require('../src/modelos/product');
+const filmotecaview = require("../src/modelos/filmotecaview");
 const { Op } = require('sequelize');
 async function SearchFilm(req, res) {
   try {
     const { query } = req.params;
-    const Allfilmoteca = await filmoteca.findAll({
+    const Allfilmoteca = await filmotecaview.findAll({
       where: { titulo: { [Op.like]: `%${query}%` } },
     });
     Allfilmoteca <= 0
