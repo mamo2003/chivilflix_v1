@@ -5,7 +5,7 @@ const { Op } = require('sequelize');
 async function SearchCat(req, res) {
   try {
     const { categoria } = req.params;
-    const Allfilmoteca = await filmoteca.findAll({
+    const Allfilmoteca = await filmotecaview.findAll({
       where: { categoria: { [Op.substring]: `%${categoria}%` } },
     });
     Allfilmoteca <= 0
