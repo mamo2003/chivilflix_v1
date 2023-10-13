@@ -21,8 +21,8 @@ GET  |/films /      |               |             | trae resultado  total de fil
 GET  |/films/       |  id/          |  :id        | trae resultado segun el id  de la pelicula(ingresarlo en barra navegador).
 GET  |/films/       |  categoria/   | :categoria  | trae resultado por categoria (ingresarlo en barra navegador: peliculas,series,etc) .
 GET  |/films/       |  genero/      | :genero     | trae resultado por generos (ingresarlo en barra navegador: aventura, cficcion, drama, etc).
-GET  |/films/       |  reparto      | :query      | trae resultado segun nombre parcial o  total de actores en el reparto (ingresarlo en barra navegador).
-GET  |/films/       |  buscar       | :query      | trae resultado segun nombre parcial o  total de nombre pelicula o serie (ingresarlo en barra navegador).
+GET  |/films/       |  reparto  /    | :query      | trae resultado segun nombre parcial o  total de actores en el reparto (ingresarlo en barra navegador).
+GET  |/films/       |  buscar  /     | :query      | trae resultado segun nombre parcial o  total de nombre pelicula o serie (ingresarlo en barra navegador).
 GET  |/films/       |  actrices/    |             | trae resultado nombre de pelicula y actriz que que es parte del reparto.
 GET  |/films/       |  trailers/    |             | trae resultado nombre de pelicula , genero y trailers ordenados por films.
 POST  |/films/      |  cargar/      |             | ingresar a traves de posmant // thunder , options: POST  ingresar la ruta , definir opcion JSON  -- RAW  y colocar en el body: {"poster":"Abcdef","titulo":"abdgcers","categoria":"Asgdefcewa","genero":"Asgdefcewa","resumen":"Asgdefcewa","temporada":xx (o null),"reparto":"Asgdefcewa","trailers": "jcbsdkahiuw" (o null)}.luego presionar SEND. y el articulo sera creado en la base sql.
@@ -31,4 +31,4 @@ DELETE|api/films/   |eliminar/      |  :id          |ingresa el numero de Id  a 
 
 ### LINKS NAVBAR
 
-Entre las opciones de accesos , al colocar la ruta raiz en el navegador, trae un NAVBAR  con acceso a cada endpoin con metodo GET que se ha generado  para este trabajo. por el momento falta desarrollar los metodos PUT-PATCH-POST-DELETE, lo cual se encuentra en desarrollo para evitar tener que gestionarlos voa posmant,thunderclient, etc.
+Entre las opciones de accesos , al colocar la ruta raiz en el navegador, trae un NAVBAR  con acceso a cada endpoin con metodo GET que se ha generado  para este trabajo. por el momento falta desarrollar los metodos PUT-PATCH-POST-DELETE, lo cual se encuentra en desarrollo para evitar tener que gestionarlos desde posmant,thunderclient, etc.
