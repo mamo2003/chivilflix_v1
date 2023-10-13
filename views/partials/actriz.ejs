@@ -4,15 +4,15 @@
     <tr>
         <th scope="col">ID</th>
         <th scope="col">PELICULA</th>
-        <th scope="col">ACTRIZ</th>
+        <th scope="col">ACTRICES</th>
     </tr>
     </thead>
     <tbody >
-<%  Allfilmoteca.sort ((A) =>{ %>
+<%  Allfilmoteca.map((A) =>{ %>
     <tr>
     <th scope="row"><%- A.idfilms %></th>
     <td><%- A.titulo %></td>
-    <td><%- A.actor %></td>
+    <td><%- A.actrices %></td>
     </tr>
 <% }) %>
     </tbody>

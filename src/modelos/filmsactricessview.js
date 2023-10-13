@@ -2,8 +2,8 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../conexion/connection');
 
-const actrizfilmsviews = sequelize.define(
-  "actrizfilmsviews",
+const filmsactricessview = sequelize.define(
+  "filmsactricessview",
   {
     idfilms: {
       type: DataTypes.INTEGER,
@@ -12,16 +12,16 @@ const actrizfilmsviews = sequelize.define(
     titulo: {
       type: DataTypes.STRING,
     },
-    idactor: {
+    idreparto: {
       type: DataTypes.STRING,
     },
-    actor: {
-      type: DataTypes.STRING,
+    actrices: {
+      type: DataTypes.TEXT,
     },
   },
-  { tableName: "actrizfilmsviews", timestamps: false }
+  { tableName: "filmsactricessview", timestamps: false }
 );
 
-module.exports = actrizfilmsviews;
+module.exports = filmsactricessview;
 
 

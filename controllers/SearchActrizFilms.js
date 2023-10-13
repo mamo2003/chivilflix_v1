@@ -1,9 +1,9 @@
 const sequelize = require('../src/conexion/connection');
-const actrizfilmsviews = require("../src/modelos/actrizfilmsviews");
+const filmsactricessview = require("../src/modelos/filmsactricessview");
 const { Op } = require('sequelize');
 async function SearchActrizFilms(req, res) {
   try {
-    const Allfilmoteca = await actrizfilmsviews.findAll();
+    const Allfilmoteca = await filmsactricessview.findAll();
     console.log(Allfilmoteca);
     Allfilmoteca <= 0
       ? res

@@ -12,7 +12,9 @@
                                 <div class="card-text"><b>temporadas:</b><%- A.temporada  %></div>
                                 <% } %>
                                 <div class="overflow-auto"><b>reparto:</b><%- A.reparto %></div>
+                                                                <% if(A.trailers != 0){ %>
                                 <div class="card-text"><b>trailer:</b><a href= "<%- A.trailers %> " >LINK</a></div>
+                                                                <% } %>
                             </div>
                     </div>
         <% }) %>

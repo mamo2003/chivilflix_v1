@@ -2,12 +2,11 @@
     <div class="row row-cols-1 row-cols-md-4 g-4">
         <%  Allfilmoteca.map ((A) =>{ %>
                         <div class="col">
-                            <div class="card">
+                            <div class="card" id="trailer">
                                 <image src= <%- A.poster %> >
-                                <div class="card-body"></div>
                                 <div class="card-title"><b><%- A.titulo%></b></div>
                                 <div class="card-text"><b>genero:</b><%- A.genero %></div>
-                                <div class="card-text"><b>trailer:</b><%- A.trailers %></div>
+                                <div class="card-text"><b>trailer:</b><a href= "<%- A.trailers %> " >LINK</a></div>
                             </div>
                     </div>
         <% }) %>
