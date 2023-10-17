@@ -19,7 +19,6 @@ metodo|first header | second header | :parameters | detalle
 ------|-------------|---------------|-------------|----------
 GET  |/      |               |             | trae resultado  total de filmms.
 GET  |/films /      |               |             | trae resultado  total de films .
-GET  |/films/       |   :titulo         |        | trae resultado segun el titulo  de la pelicula(ingresarlo en barra navegador).
 GET  |/films/       |  id/          |  :id        | trae resultado segun el id  de la pelicula(ingresarlo en barra navegador).
 GET  |/films/       |  categoria/   | :categoria  | trae resultado por categoria (ingresarlo en barra navegador: peliculas,series,etc) .
 GET  |/films/       |  genero/      | :genero     | trae resultado por generos (ingresarlo en barra navegador: aventura, cficcion, drama, etc).
