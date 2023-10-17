@@ -17,7 +17,9 @@ Para acceder a la base de datos  se debe usar la siguiente URL:
 
 metodo|first header | second header | :parameters | detalle
 ------|-------------|---------------|-------------|----------
-GET  |/films /      |               |             | trae resultado  total de films en BD.
+GET  |/      |               |             | trae resultado  total de filmms.
+GET  |/films /      |               |             | trae resultado  total de films .
+GET  |/films/       |   :titulo         |        | trae resultado segun el titulo  de la pelicula(ingresarlo en barra navegador).
 GET  |/films/       |  id/          |  :id        | trae resultado segun el id  de la pelicula(ingresarlo en barra navegador).
 GET  |/films/       |  categoria/   | :categoria  | trae resultado por categoria (ingresarlo en barra navegador: peliculas,series,etc) .
 GET  |/films/       |  genero/      | :genero     | trae resultado por generos (ingresarlo en barra navegador: aventura, cficcion, drama, etc).
@@ -26,9 +28,9 @@ GET  |/films/       |  buscar  /     | :query      | trae resultado segun nombre
 GET  |/films/       |  actrices/    |             | trae resultado nombre de pelicula y actriz que que es parte del reparto.
 GET  |/films/       |  trailers/    |             | trae resultado nombre de pelicula , genero y trailers ordenados por films.
 POST  |/films/      |  cargar/      |             | ingresar a traves de posmant // thunder , options: POST  ingresar la ruta , definir opcion JSON  -- RAW  y colocar en el body: {"poster":"Abcdef","titulo":"abdgcers","categoria":"Asgdefcewa","genero":"Asgdefcewa","resumen":"Asgdefcewa","temporada":xx (o null),"reparto":"Asgdefcewa","trailers": "jcbsdkahiuw" (o null)}.luego presionar SEND. y el articulo sera creado en la base sql.
-PUT | api/films/    | cambiar/      |  :id         |ingresar el id  en la bara del navegador  seguido de la ruta  e ingresar a traves de posmant // thunder , options: PUT  ingresar la ruta , definir opcion JSON  -- RAW  y colocar en el body con el siguiente formato: {"poster":"Abcdef","titulo":"abdgcers","categoria":"Asgdefcewa","genero":"Asgdefcewa","resumen":"Asgdefcewa","temporada":xx (o null),"reparto":"Asgdefcewa","trailers": "jcbsdkahiuw" (o null)}. los datos que se quieran actualizar . luego presionar SEND. y el articulo se actualizaran los datos ingresados en la base mongoDB.
+PUT | /films/    | cambiar/      |  :id         |ingresar el id  en la bara del navegador  seguido de la ruta  e ingresar a traves de posmant // thunder , options: PUT  ingresar la ruta , definir opcion JSON  -- RAW  y colocar en el body con el siguiente formato: {"poster":"Abcdef","titulo":"abdgcers","categoria":"Asgdefcewa","genero":"Asgdefcewa","resumen":"Asgdefcewa","temporada":xx (o null),"reparto":"Asgdefcewa","trailers": "jcbsdkahiuw" (o null)}. los datos que se quieran actualizar . luego presionar SEND. y el articulo se actualizaran los datos ingresados en la base mongoDB.
 DELETE|api/films/   |eliminar/      |  :id          |ingresa el numero de Id  a continuacion de la ruta marcada en el navegador  de posmant // thunder , options: DELETE,  luego presiona "SEND".
 
 ### LINKS NAVBAR
 
-Entre las opciones de accesos , al colocar la ruta raiz en el navegador, trae un NAVBAR  con acceso a cada endpoin con metodo GET que se ha generado  para este trabajo. por el momento falta desarrollar los metodos PUT-PATCH-POST-DELETE, lo cual se encuentra en desarrollo para evitar tener que gestionarlos desde posmant,thunderclient, etc.
+Entre las opciones de accesos , al colocar la ruta raiz en el navegador, trae un NAVBAR  con acceso a cada endpoin con metodo GET que se ha generado  para este trabajo. por el momento falta desarrollar los metodos PUT-PATCH-POST-DELETE, lo cual se encuentra en desarrollo para evitar tener que gestionarlos desde posmant,
